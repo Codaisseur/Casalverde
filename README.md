@@ -1,24 +1,29 @@
-# README
+# Casalverde
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development
 
-Things you may want to cover:
+Setup is as easy as:
 
-* Ruby version
+```bash
+$> cd ~/Code/Rails
+$> git clone git@github.com:Codaisseur/Casalverde.git
+$> cd Casalverde
+$> bundle install
+$> rails db:setup
+```
 
-* System dependencies
+## Testing
 
-* Configuration
+To use the notifications, you need to install `terminal-notifier` with Homebrew:
 
-* Database creation
+```bash
+brew install terminal-notifier
+```
 
-* Database initialization
+Then run Guard to run the tests as you're working on them:
 
-* How to run the test suite
+```bash
+bundle exec guard
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Note**: press `<Enter>` in Guard to run all tests.
