@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-gem 'slim-rails'
+
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'carrierwave'
 gem 'cloudinary'
