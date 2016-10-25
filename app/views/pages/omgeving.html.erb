@@ -1,0 +1,21 @@
+<h1>Omgeving</h1>
+
+<div class="container">
+
+  <div class="image">
+    <% @content_block.each do |b| %>
+        <img src="<%= b.image_url %>">
+    <% end %>
+  </div>
+
+  <div class="content">
+    <% @content_block.each do |b| %>
+        <p><%= b.title %></p>
+    <% end %>
+
+    <% @content_block.each do |b| %>
+        <p><%= b.body %></p>
+    <% end %>
+  </div>
+
+</div>

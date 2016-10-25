@@ -1,0 +1,30 @@
+
+<div class="jumbotron">
+  <h1>Home</h1>
+  <div class="container">
+    <h1 class="display-3">Casal verde</h1>
+    <p>THier komt een achtergrond afbeelding met een introtekst en een knop .</p>
+    <p><a class="btn btn-primary btn-lg" href="/prijs.nl" role="button">Boek nu! &raquo;</a></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">leeg</div>
+  <div class="col-md-6">tekst gecentreerd</div>
+  <div class="col-md-3">leeg</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-4"><% @content_block.each do |b| %>
+        <img src="<%= b.image_url %>" class="img-fluid" >
+    <% end %></div>
+  <div class="col-xs-12 col-md-8"><% @content_block.each do |b| %>
+        <p><%= b.title %></p>
+    <% end %>
+
+    <% @content_block.each do |b| %>
+        <p><%= b.body %></p>
+    <% end %></div>
+</div>
+
+
