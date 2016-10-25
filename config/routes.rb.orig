@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+<<<<<<< HEAD
   get "faciliteiten" => "pages#faciliteiten"
+=======
   get "prijs" => "pages#prijs"
+>>>>>>> master
 end
