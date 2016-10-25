@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'slim-rails'
 gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'carrierwave'
+gem 'cloudinary'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
