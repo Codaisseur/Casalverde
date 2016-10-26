@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Codaisseurbnb</title>
+    <title>Casa</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,11 +9,12 @@
   </head>
 
   <body>
-  <!-- Static navbar -->
-  <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar' %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
-  <div class="container">
-    <%= yield %>
-  </div>
+
+      <%= render 'shared/footer' %>
 </body>
 </html>
