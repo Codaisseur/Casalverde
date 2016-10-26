@@ -8,8 +8,8 @@ class PagesController < ApplicationController
   end
 
   def prijs
-    @content_block = ContentBlock.where(page: "Prijs en beschikbaarheid").order(:order)
-
+    @content_block = ContentBlock.where(page: "Prijs en beschikbaarheid")
+    #@content_block = ContentBlock.order(order: :desc)
   end
 
   def omgeving
