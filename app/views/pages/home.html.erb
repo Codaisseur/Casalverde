@@ -6,10 +6,10 @@
   <div class="col-xs-12 col-md-8">
     <% @content_block.each do |b| %>
         <h1><%= b.title %></h1>
-        <p><%= b.body %></p>
+        <p><%= b.body.html_safe %></p>
   </div>
         <div class="col-xs-6 col-md-4">
-          <img src="<%= b.image_url %>"class="img-fluid">
+          <img src="<%= b.image_url %>" class="img-fluid">
         </div>
     <% end %>
 </div>
