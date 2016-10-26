@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%= render 'banner' %>
+=======
+<h1>Prijs</h1>
+>>>>>>> navbar
 
 <div class="row">
   <div class="col-md-3">leeg</div>
@@ -12,13 +16,7 @@
   <div class="col-md-3">leeg</div>
 </div>
 
-<div class="container">
 
-  <div class="image">
-    <% @content_block.each do |b| %>
-        <img src="<%= b.image_url %>">
-    <% end %>
-  </div>
 
 
 
@@ -37,6 +35,7 @@
 </div>
 
 
+<<<<<<< HEAD
 
 <div id="main-container" class="container-fluid">
 
@@ -48,3 +47,6 @@
     </div>
 
   </div>
+=======
+</div>
+>>>>>>> navbar
