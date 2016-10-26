@@ -1,46 +1,15 @@
 
 <%= render 'banner' %>
 
-<div class="row">
-  <div class="col-md-3">leeg</div>
-  <div class="col-md-6">tekst gecentreerd; ONZE ... UITZICHT!</div>
-  <div class="col-md-3">leeg</div>
-</div>
 
 <div class="row">
-  <div class="col-xs-6 col-md-4"><% @content_block.each do |b| %>
-        <img src="<%= b.image_url %>" class="img-fluid" >
-    <% end %></div>
-  <div class="col-xs-12 col-md-8"><% @content_block.each do |b| %>
-        <p><%= b.title %></p>
-    <% end %>
-
+  <div class="col-xs-12 col-md-8">
     <% @content_block.each do |b| %>
-        <p><%= b.body %> wanneer ...weekprijs lager is</p>
-    <% end %></div>
-</div>
-
-<div class="row">
-  <div class="col-md-3">leeg</div>
-  <div class="col-md-6">tekst gecentreerd; 4 Het op ...Florence 35 km</div>
-  <div class="col-md-3">leeg</div>
-</div>
-
-<div class="row">
-  <div class="col-xs-12 col-md-8"><% @content_block.each do |b| %>
-        <p><%= b.title %></p>
+        <h1><%= b.title %></h1>
+        <p><%= b.body %></p>
+  </div>
+        <div class="col-xs-6 col-md-4">
+          <img src="<%= b.image_url %>"class="img-fluid">
+        </div>
     <% end %>
-
-    <% @content_block.each do |b| %>
-        <p><%= b.body %> 5Qua ...productie</p>
-    <% end %></div>
-  <div class="col-xs-6 col-md-4"><% @content_block.each do |b| %>
-        <img src="<%= b.image_url %>" class="img-fluid" >
-    <% end %></div>
-</div>
-
-<div class="row">
-  <div class="col-md-3">leeg</div>
-  <div class="col-md-6">tekst gecentreerd; 6 Neemt ...Team casalverde</div>
-  <div class="col-md-3">leeg</div>
 </div>
