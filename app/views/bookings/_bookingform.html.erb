@@ -1,20 +1,19 @@
 <div>
   <%= form_for [@booking = Booking.new] do |f| %>
-      <p><strong>Nightly Price:€200</strong> <span>€</span> <%= @booking.price %></p>
+      <p><strong>Weekly Price: €1000,-</strong> </p>
 
       <hr>
-
+      <div class="form-group">
       <%= f.label :first_name %>
-      <%= f.text_field :first_name %>
+      <%= f.text_field :first_name, placeholder: "First name" %>
 
       <%= f.label :last_name %>
-      <%= f.text_field :last_name %>
+      <%= f.text_field :last_name, placeholder: "Last name" %>
 
       <%= f.label :email %>
-      <%= f.text_field :email %>
-
+      <%= f.text_field :email, placeholder: "your email" %>
+      </div>
       <hr>
-
       <div class="form-group">
         <label>Check In:</label>
         <%= f.date_select :starts_at %>
@@ -25,8 +24,7 @@
         <%= f.date_select :ends_at %>
       </div>
 
-
-      <%= f.hidden_field :price, value: @booking.price %>
+      <%= f.hidden_field :price, value: 100 %>
 
       <hr>
 
