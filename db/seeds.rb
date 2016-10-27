@@ -29,3 +29,6 @@ content_block2 = ContentBlock.create ({title: "Titel 2", body:"body 2", image_ur
 content_block2 = ContentBlock.create ({title: "Titel 2", body:"body 2", image_url:"http://res.cloudinary.com/mippet/image/upload/v1477324723/Casalverde/9200000047280366.jpg", page:"Faciliteiten", order: 2 })
 content_block2 = ContentBlock.create ({title: "Titel 2", body:"body 2", image_url:"http://res.cloudinary.com/mippet/image/upload/v1477324723/Casalverde/9200000047280366.jpg", page:"Faciliteiten", order: 2 })
 content_block2 = ContentBlock.create ({title: "Titel 2", body:"body 2", image_url:"http://res.cloudinary.com/mippet/image/upload/v1477324723/Casalverde/9200000047280366.jpg", page:"Faciliteiten", order: 2 })
+
+booking1 = Booking.create ({first_name:"miriam", last_name:"Benvenuto", email:"miriam@casa.nl", starts_at:10.days.from_now, ends_at:17.days.from_now, price:1000.00, total_price:1001.00, total_days:7} )
+booking2 = Booking.create ({first_name:"jan", last_name:"Patrijs", email:"jan@moeder.nl", starts_at:40.days.from_now, ends_at:47.days.from_now, price:1500.00, total_price:1501.00, total_days:7} )
