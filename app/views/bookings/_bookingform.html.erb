@@ -1,6 +1,6 @@
 <div>
   <%= form_for [@booking = Booking.new] do |f| %>
-      <p><strong>Nightly Price:€200</strong> <span>€</span> <%= @booking.price %></p>
+      <p><strong> Bedrag per week </strong> <span>€</span> <%= @booking.price = 400 %></p>
 
       <hr>
 
@@ -25,9 +25,8 @@
         <%= f.date_select :ends_at %>
       </div>
 
-
-      <%= f.hidden_field :price, value: @booking.price %>
-
+      <%= f.hidden_field :price, value: 200 %>
+      
       <hr>
 
       <div class="actions">

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
-  resources :bookings, only: [:create]
+  match '/bookings',     to: 'bookings#create',          via: 'post'
+  resources :bookings, only: [:new, :create]
 
   get "faciliteiten" => "pages#faciliteiten"
   get "prijs" => "pages#prijs"
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
   get "contact" => "pages#contact"
   get "home" => "pages#home"
   get "booking" => "pages#booking"
+  
 end
