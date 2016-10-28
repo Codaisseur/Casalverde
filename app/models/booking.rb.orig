@@ -1,5 +1,4 @@
 class Booking < ApplicationRecord
-<<<<<<< HEAD
 #
 #  before_validation
 #
@@ -44,11 +43,17 @@ class Booking < ApplicationRecord
 
  end
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates :starts_at, presence: true
+  validates :ends_at, presence: true
 
-=======
 
 
+<<<<<<< HEAD
   before_create :set_check_in_times
+
 
   def self.during arrival, departure
     arrival = arrival.change(hour: 14, min: 00, sec: 00)
@@ -70,11 +75,40 @@ class Booking < ApplicationRecord
     where("ends_at < ? AND ends_at > ?", departure, arrival)
   end
 
+
+  def get_total_price(booking_params)
+    checkin, checkout = get_dates(booking_params)
+
+    total_days = (checkout - checkin).to_i
+    400 * total_days
+  end
+
+  def get_dates(booking_params)
+    checkin  =  Date.new(booking_params["starts_at(1i)"].to_i,
+                         booking_params["starts_at(2i)"].to_i,
+                         booking_params["starts_at(3i)"].to_i)
+
+    checkout =  Date.new(booking_params["ends_at(1i)"].to_i,
+                         booking_params["ends_at(2i)"].to_i,
+                         booking_params["ends_at(3i)"].to_i)
+
+     return checkin, checkout
+  end
+
+
+
+
+
+
+
+
+
   private
   def set_check_in_times
     self.starts_at = starts_at.change(hour: 14, min: 00, sec: 00)
     self.ends_at = ends_at.change(hour: 11, min: 00, sec: 00)
   end
 
+=======
 >>>>>>> master
 end

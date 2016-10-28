@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <h1>Bookings overview</h1>
+
+          <% @bookings.each do|b|%>
+
+              <table class="table">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Booking starts at</th>
+                  <th>Booking ends at</th>
+                  <th>Total stay</th>
+                  <th>Total price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td><%= b.first_name%></td>
+                  <td><%= b.last_name%></td>
+                  <td><%= b.email%></td>
+                  <td><%= b.starts_at%></td>
+                  <td><%= b.ends_at%></td>
+                  <td><%= b.total_days%></td>
+                  <td><%= b.total_price%></td>
+                </tr>
+                </tbody>
+              </table>
+
+          <% end %>
+    </div>
