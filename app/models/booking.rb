@@ -90,6 +90,7 @@ validates :ends_at, presence: true
   #                       booking_params["ends_at(3i)"].to_i)
 
    return checkin, checkout
-(??)
+ end
 end
+
 
