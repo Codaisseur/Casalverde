@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
+<<<<<<< HEAD
   match '/bookings',     to: 'bookings#create',          via: 'post'
+=======
+>>>>>>> master
   resources :bookings, only: [:new, :create]
 
   get "faciliteiten" => "pages#faciliteiten"
