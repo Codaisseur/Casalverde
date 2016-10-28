@@ -16,13 +16,22 @@ class BookingsController < ApplicationController
       end
   end
 
+<<<<<<< HEAD
+      @booking = Booking.new(booking_params)
+  if @booking.save(booking_params)
+    redirect_to @booking
+    end
+
+   end
+=======
 def total_days
   total_days = (checkout - checkin).to_i
 end
 
   def checkin
     starts_at = checkin
-   end
+  end
+>>>>>>> master
 
   private
 
