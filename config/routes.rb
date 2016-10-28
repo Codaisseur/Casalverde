@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   get "home" => "pages#home"
   get "booking" => "pages#booking"
   get "bookings" => "pages#bookings"
-  
+  get "booking/show" =>"bookings#show"
 end

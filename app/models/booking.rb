@@ -25,17 +25,48 @@ validates :ends_at, presence: true
        .or(start_during(arrival,departure))
  end
 
- def self.starts_before_ends_after arrival, departure
-   where("starts_at < ? AND ends_at > ?", arrival, departure)
- end
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates :starts_at, presence: true
+  validates :ends_at, presence: true
 
  def self.start_during arrival, departure
    where("starts_at > ? AND starts_at < ? ", arrival, departure)
  end
 
+
  def self.ends_during arrival, departure
    where("ends_at < ? AND ends_at > ?", departure, arrival)
  end
+
+
+
+  def get_total_price(booking_params)
+    checkin, checkout = get_dates(booking_params)
+
+    total_days = (checkout - checkin).to_i
+    400 * total_days
+  end
+
+  def get_dates(booking_params)
+    checkin  =  Date.new(booking_params["starts_at(1i)"].to_i,
+                         booking_params["starts_at(2i)"].to_i,
+                         booking_params["starts_at(3i)"].to_i)
+
+    checkout =  Date.new(booking_params["ends_at(1i)"].to_i,
+                         booking_params["ends_at(2i)"].to_i,
+                         booking_params["ends_at(3i)"].to_i)
+
+     return checkin, checkout
+  end
+
+
+
+
+
+
+
 
 
  private

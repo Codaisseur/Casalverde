@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def show
+    @bookings = Booking.all
+  end
+
   def new
     @booking = Booking.new
   end
@@ -19,8 +23,19 @@ class BookingsController < ApplicationController
 
   def checkin
     starts_at = checkin
+   end
+
+<<<<<<< HEAD
+=======
+  private
+
+  def booking_params
+    params.require(:booking).permit(:first_name, :last_name, :email, :starts_at, :ends_at, :price, :total_price, :total_days)
   end
 
+
+
+>>>>>>> master
   def checkout
     ends_at = checkout
   end
