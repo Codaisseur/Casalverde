@@ -61,14 +61,6 @@ validates :ends_at, presence: true
      return checkin, checkout
   end
 
-
-
-
-
-
-
-
-
  private
  def set_check_in_times
    self.starts_at = starts_at.change(hour: 14, min: 00, sec: 00)
@@ -98,5 +90,6 @@ validates :ends_at, presence: true
   #                       booking_params["ends_at(3i)"].to_i)
 
    return checkin, checkout
-  end
+(??)
 end
+
