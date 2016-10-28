@@ -1,36 +1,47 @@
 body{
-  background-color: #e6efb8;
+  background-size: cover;
+  background-color: #e8dbb4;
 }
 
 .navbar-default {
-  background-color: #ffa981;
+  background-color: #593b43;
   border-color: #d4cbcb;
 }
 
-.navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:hover, .navbar-default .navbar-nav .active a:focus {
-  color: #427d18;
-  background-color: #ffbb9c;
+.navbar-default .navbar-nav > li > a {
+  color: #c3bfad;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #593b43;
+  background-color: #f2b988;
+}
+.navbar-default .navbar-nav > li > a:focus{
+  background-color: #f2b988;
 }
 
+
+
+
+
+
 .jumbotron {
-  background-color: #f7da71;
+  background-color: #f2b988;
 }
 
 h1.display-3{
-  color: #417d17;
+  color: #8c8669;
 }
 
 .jumbotron .container p{
-  color: #866224;
+  color: #8c5c51;
 }
 
 .btn-primary {
-  background-color: #427d18;
+  background-color: #593b43;
   border-color: #585756;
 }
 
 .img-fluid {
   max-width: 100%;
   border-radius: 6px;
-
 }

@@ -27,8 +27,8 @@
                   <td><%= b.email%></td>
                   <td><%= b.starts_at%></td>
                   <td><%= b.ends_at%></td>
-                  <td><%= ((b.ends_at).to_date - (b.starts_at).to_date).to_i %> </td>
-                  <td><%= %></td>
+                  <td><%=((b.ends_at).to_date - (b.starts_at).to_date).to_i %> </td>
+                  <td>€ <%= (((b.ends_at).to_date - (b.starts_at).to_date).to_i) * 450 %> </td>
                 </tr>
                 </tbody>
               </table>
