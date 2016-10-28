@@ -1,7 +1,15 @@
 class Booking < ApplicationRecord
 
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates :starts_at, presence: true
+  validates :ends_at, presence: true
+
+
 
   before_create :set_check_in_times
+
 
   def self.during arrival, departure
     arrival = arrival.change(hour: 14, min: 00, sec: 00)
@@ -22,6 +30,34 @@ class Booking < ApplicationRecord
   def self.ends_during arrival, departure
     where("ends_at < ? AND ends_at > ?", departure, arrival)
   end
+
+
+  def get_total_price(booking_params)
+    checkin, checkout = get_dates(booking_params)
+
+    total_days = (checkout - checkin).to_i
+    400 * total_days
+  end
+
+  def get_dates(booking_params)
+    checkin  =  Date.new(booking_params["starts_at(1i)"].to_i,
+                         booking_params["starts_at(2i)"].to_i,
+                         booking_params["starts_at(3i)"].to_i)
+
+    checkout =  Date.new(booking_params["ends_at(1i)"].to_i,
+                         booking_params["ends_at(2i)"].to_i,
+                         booking_params["ends_at(3i)"].to_i)
+
+     return checkin, checkout
+  end
+
+
+
+
+
+
+
+
 
   private
   def set_check_in_times

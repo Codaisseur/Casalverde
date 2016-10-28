@@ -44,3 +44,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mail_form'
 gem 'simple_form'
+gem 'validates_timeliness', '~> 4.0'

@@ -24,7 +24,7 @@
         <%= f.date_select :ends_at %>
       </div>
 
-      <%= f.hidden_field :price, value: 100 %>
+      <%= f.hidden_field :price, value: @booking.price%>
 
       <hr>
 
@@ -33,3 +33,6 @@
       </div>
   <% end %>
 </div>
+
+<hr>
+<p>Bookings-list <%= @booking %></p>
