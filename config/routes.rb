@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "contact" => "pages#contact"
   get "home" => "pages#home"
   get "booking" => "pages#booking"
+  get "bookings" => "pages#bookings"
   
 end
