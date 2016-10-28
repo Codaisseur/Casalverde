@@ -1,7 +1,11 @@
 class BookingsController < ApplicationController
 
-  def show
+  def index
     @bookings = Booking.all
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -9,11 +13,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    if @booking.save
-      render "pages/bookings", notice: "Thank you for booking!"
-    else
-      redirect_to booking_path
+      @booking = Booking.new(booking_params)
+      if @booking.save
+        redirect_to @booking, notice: "Thank you for booking!"
+      else
+        redirect_to booking_path
     end
   end
 
@@ -23,38 +27,36 @@ class BookingsController < ApplicationController
 
   def checkin
     starts_at = checkin
-  end
+   end
 
   def checkout
     ends_at = checkout
   end
 
-
-
   private
 
-  def get_total_price(booking_params)
-    checkin, checkout = get_dates(booking_params)
+   def get_total_price(booking_params)
+     checkin, checkout = get_dates(booking_params)
 
-    total_days = (checkout - checkin).to_i
-    booking_params[:price].to_i * total_days
-  end
+     total_days = (checkout - checkin).to_i
+     booking_params[:price].to_i * total_days
+   end
 
-  def get_dates(booking)
-    booking.starts_at.to_date - booking.ends_at.to_date
+   def get_dates(booking)
+     booking.starts_at.to_date - booking.ends_at.to_date
 
     #           =  Date.new(booking_params["starts_at(1i)"].to_i,
     #                       booking_params["starts_at(2i)"].to_i,
     #                       booking_params["starts_at(3i)"].to_i)
-    #
+     #
     #  checkout =  Date.new(booking_params["ends_at(1i)"].to_i,
     #                       booking_params["ends_at(2i)"].to_i,
     #                       booking_params["ends_at(3i)"].to_i)
 
-    return checkin, checkout
-  end
+     return checkin, checkout
+   end
 
-  def booking_params
-    params.require(:booking).permit(:first_name, :last_name, :email, :starts_at, :ends_at, :price, :total_price, :total_days)
-  end
-end
+   def booking_params
+     params.require(:booking).permit(:first_name, :last_name, :email, :starts_at, :ends_at, :price, :total_price, :total_days)
+   end
+ end
