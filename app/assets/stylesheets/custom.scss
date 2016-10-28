@@ -2,6 +2,9 @@ body{
   background-size: cover;
   background-color: #e8dbb4;
 }
+hr{
+  color: #8c8669;
+}
 
 .navbar-default {
   background-color: #593b43;
@@ -18,11 +21,6 @@ body{
 .navbar-default .navbar-nav > li > a:focus{
   background-color: #f2b988;
 }
-
-
-
-
-
 
 .jumbotron {
   background-color: #f2b988;
@@ -44,4 +42,7 @@ h1.display-3{
 .img-fluid {
   max-width: 100%;
   border-radius: 6px;
+}
+.row{
+  margin-bottom: 32px;
 }
